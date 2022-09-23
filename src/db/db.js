@@ -1,15 +1,15 @@
-const mysql = require('promise-mysql')
-const ENV = require('./../config/enviroment')
+const mysql = require('promise-mysql');
+const ENV = require('./../config/enviroment');
 
 const conn = mysql.createConnection({
     host: ENV.HOST,
     database: ENV.DB,
     user: ENV.USER,
-    password: ENV.PASS
-})
+    password: ENV.PASS,
+});
 
 const getConnection = () => {
-    return conn
-}
+    return conn;
+};
 
-module.exports = getConnection
+module.exports = getConnection;
